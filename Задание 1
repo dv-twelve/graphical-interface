@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace windowsform
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string a = textBox1.Text;
+            string b = textBox2.Text;
+            string c = textBox3.Text;
+            string d = textBox4.Text;
+            double A = Convert.ToDouble(a);
+            double B = Convert.ToDouble(b);
+            double C = Convert.ToDouble(c);
+            double D = Convert.ToDouble(d);
+            double Rast = Math.Sqrt(Math.Pow(C - A, 2) + Math.Pow((D - B), 2));
+            textBox5.Text = Rast.ToString();
+        }
+    }
+}
+
